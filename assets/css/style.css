@@ -166,6 +166,209 @@ footer nav a:hover {
     transform: scale(1.05);
 }
 
+/* About Company Section */
+.about-company {
+    padding: 80px 20px;
+    background: #f4f4f4;
+}
+
+.about-company .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #1b5e20;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin: 30px 0 15px 0;
+    color: #1b5e20;
+}
+
+.about-text ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.about-text ul li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-text ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.btn-contact {
+    display: inline-block;
+    background: #1b5e20;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-contact:hover {
+    background: #2e7d32;
+    transform: scale(1.05);
+}
+
+.about-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.image-item {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.image-item-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.image-item-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.image-item-3 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-item-1 img,
+.image-item-2 img {
+    height: 160px;
+}
+
+.image-item-3 img {
+    height: 280px;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1b5e20;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #1b5e20;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
 /* Responsive */
 @media(max-width:1024px) {
     .hero h1 {
@@ -174,6 +377,29 @@ footer nav a:hover {
 
     .hero p {
         font-size: 1.1rem;
+    }
+
+    .about-images {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .image-item-1 img,
+    .image-item-2 img {
+        height: 140px;
+    }
+
+    .image-item-3 img {
+        height: 240px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .card-image {
+        height: 180px;
     }
 }
 
@@ -232,107 +458,111 @@ footer nav a:hover {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    /* About Pesticide Section */
-.about-pesticide {
-    padding: 80px 20px;
-    background: #f4f4f4;
-}
+    .about-company,
+    .services {
+        padding: 60px 15px;
+    }
 
-.about-pesticide .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.about-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-text h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #1b5e20;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.btn-about {
-    display: inline-block;
-    background: #ff9800;
-    color: white;
-    font-weight: 600;
-    padding: 12px 30px;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.btn-about:hover {
-    background: #e68900;
-    transform: scale(1.05);
-}
-
-.about-image {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* Responsive */
-@media(max-width:992px){
     .about-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
     .about-text h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    .about-text p {
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p,
+    .about-text ul li {
         font-size: 1rem;
     }
 
-    .about-image img {
-        max-width: 400px;
+    .about-images {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .image-item-1,
+    .image-item-2,
+    .image-item-3 {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .image-item-1 img,
+    .image-item-2 img,
+    .image-item-3 img {
+        height: 200px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 1.1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-image {
+        height: 200px;
     }
 }
 
 @media(max-width:576px){
-    .about-pesticide {
-        padding: 60px 15px;
+    .about-company,
+    .services {
+        padding: 50px 15px;
     }
 
     .about-text h2 {
         font-size: 1.6rem;
     }
 
-    .about-text p {
+    .about-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-text p,
+    .about-text ul li {
         font-size: 0.95rem;
     }
 
-    .about-image img {
-        max-width: 100%;
+    .about-images {
+        padding: 10px;
+        gap: 10px;
     }
-}
 
-}
+    .image-item-1 img,
+    .image-item-2 img,
+    .image-item-3 img {
+        height: 180px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+}   
