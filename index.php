@@ -64,7 +64,7 @@
       <div class="services-grid">
         <div class="service-card">
           <div class="card-image">
-            <img src="assets/images/bann.jpg" alt="Commercial Pest Control">
+            <img src="assets/images/banner.jpg" alt="Commercial Pest Control">
           </div>
           <div class="card-content">
             <h3>Commercial Pest Control</h3>
@@ -73,7 +73,7 @@
         </div>
         <div class="service-card">
           <div class="card-image">
-            <img src="assets/images/bann.jpg" alt="Emergency Pest Response">
+            <img src="assets/images/banner.jpg" alt="Emergency Pest Response">
           </div>
           <div class="card-content">
             <h3>Emergency Pest Response</h3>
@@ -82,7 +82,7 @@
         </div>
         <div class="service-card">
           <div class="card-image">
-            <img src="assets/images/bann.jpg" alt="Preventive Pest Management">
+            <img src="assets/images/banner.jpg" alt="Preventive Pest Management">
           </div>
           <div class="card-content">
             <h3>Preventive Pest Management</h3>
@@ -91,7 +91,7 @@
         </div>
         <div class="service-card">
           <div class="card-image">
-            <img src="assets/images/bann.jpg" alt="Eco-Friendly Pest Solutions">
+            <img src="assets/images/banner.jpg" alt="Eco-Friendly Pest Solutions">
           </div>
           <div class="card-content">
             <h3>Eco-Friendly Pest Solutions</h3>
