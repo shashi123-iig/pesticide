@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title><?= $page_title ?? 'Pesticide Company'; ?></title>
-    <meta name="description" content="<?= $page_description ?? 'Leading pesticide company providing eco-friendly crop protection solutions.'; ?>">
-    <link rel="canonical" href="<?= $page_url ?? 'https://www.example.com/'; ?>">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="<?= $page_title ?? 'Pesticide Company'; ?>">
-    <meta property="og:description" content="<?= $page_description ?? 'Leading pesticide company providing eco-friendly crop protection solutions.'; ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?= $page_url ?? 'https://www.example.com/'; ?>">
-    <meta property="og:image" content="<?= $page_image ?? 'https://www.example.com/images/og-image.jpg'; ?>">
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesticide Company</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.php">🌿 Pesticide Co.</a>
-            </div>
 
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.php">Pesticide Co.</a>
 
-            <ul class="nav-list">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="aboutus.php">About</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="contactus.php">Contact</a></li>
-                <li><a href="contactus.php" class="btn-book">Book Now</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+      <!-- Hamburger button triggers offcanvas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <script>
-        const menu = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-list');
+      <!-- Desktop Menu -->
+      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" >
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.php">Contact</a></li>
+          <li class="nav-item"><a class="btn btn-warning text-dark" href="contactus.php">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        menu.addEventListener('click', () => {
-            navList.classList.toggle('active');
-            menu.classList.toggle('open');
-        });
-    </script>
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel" style="background-color: #18ab49;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contactus.php">Contact</a></li>
+        <li class="nav-item"><a class="btn btn-warning text-dark mt-3" href="contactus.php">Book Now</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Optional custom JS -->
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
